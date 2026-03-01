@@ -2,9 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, ChevronRight, Hash } from 'lucide-react';
-import { Project } from '@/types/project';
-import { Category } from '@/types/project';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { categories } from '@/data/categories';
 import { projects } from '@/data/projects';
 import { cn } from '@/lib/utils';

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Globe, ChevronDown, Check } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
-import { languages, Language } from '@/data/translations';
+import { languages } from '@/data/translations';
 import { cn } from '@/lib/utils';
 
 export default function LanguageSwitcher() {

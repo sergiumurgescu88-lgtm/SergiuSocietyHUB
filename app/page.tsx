@@ -37,7 +37,6 @@ export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'construction'>('all');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const scrollToProject = (projectId: string) => {
     // Reset filters to show the project if it's hidden
@@ -130,30 +129,40 @@ export default function PortfolioPage() {
           {t.heroDescription}
         </motion.p>
 
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
+      </section>
+
+      {/* Stats Overview (Global) */}
+      {activeCategory === 'all' && (
+        <section className="max-w-7xl mx-auto px-4 pt-12">
+          <StatsOverview />
+        </section>
+      )}
+
+      {/* WhatsApp & Stats Section */}
+      <div className="flex flex-col items-center gap-8 my-16 px-4">
         <WhatsAppCTA />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3 }}
-          className="inline-flex bg-[#0c0f1e] border border-white/10 rounded-2xl overflow-hidden shadow-2xl"
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-3 bg-[#0c0f1e] border border-white/10 rounded-2xl overflow-hidden shadow-2xl w-full max-w-sm md:max-w-md"
         >
-          <div className="px-5 py-4 md:px-8 md:py-5 text-center border-r border-white/10">
-            <div className="font-display font-extrabold text-2xl md:text-3xl text-white">{projects.length}</div>
-            <div className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.projects}</div>
+          <div className="px-3 py-4 md:px-8 md:py-5 text-center border-r border-white/10">
+            <div className="font-display font-extrabold text-xl md:text-3xl text-white">{projects.length}</div>
+            <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.projects}</div>
           </div>
-          <div className="px-5 py-4 md:px-8 md:py-5 text-center border-r border-white/10">
-            <div className="font-display font-extrabold text-2xl md:text-3xl text-white">7</div>
-            <div className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.domains}</div>
+          <div className="px-3 py-4 md:px-8 md:py-5 text-center border-r border-white/10">
+            <div className="font-display font-extrabold text-xl md:text-3xl text-white">7</div>
+            <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.domains}</div>
           </div>
-          <div className="px-5 py-4 md:px-8 md:py-5 text-center">
-            <div className="font-display font-extrabold text-2xl md:text-3xl text-white">100%</div>
-            <div className="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.live}</div>
+          <div className="px-3 py-4 md:px-8 md:py-5 text-center">
+            <div className="font-display font-extrabold text-xl md:text-3xl text-white">100%</div>
+            <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.live}</div>
           </div>
         </motion.div>
-
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[1px] bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent" />
-      </section>
+      </div>
 
       {/* Wild Bot Section */}
       <WildBotSection />
@@ -166,8 +175,6 @@ export default function PortfolioPage() {
 
       {/* Main Content */}
       <section className="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        {activeCategory === 'all' && <StatsOverview />}
-
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           <button
             onClick={() => setStatusFilter('all')}
@@ -197,7 +204,7 @@ export default function PortfolioPage() {
             {t.filterWork}
           </button>
         </div>
-        
+
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
@@ -220,11 +227,10 @@ export default function PortfolioPage() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                   >
-                    {catProjects.map((project, idx) => (
+                    {catProjects.map((project) => (
                       <ProjectCard 
                         key={project.id} 
                         project={project} 
-                        index={idx} 
                         onOpenPreview={setSelectedProject}
                       />
                     ))}
@@ -243,7 +249,7 @@ export default function PortfolioPage() {
       />
 
       {/* Newsletter Section */}
-      <NewsletterSection onSubscribe={() => setIsSubscribed(true)} />
+      <NewsletterSection onSubscribe={() => {}} />
 
       {/* Footer */}
       <footer className="relative pt-16 pb-20 px-4 text-center border-t border-white/10">

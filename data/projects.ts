@@ -11,7 +11,8 @@ export const projects: Project[] = [
     targetAudience: "Proprietari de restaurante care vor să treacă în era digitală.",
     innovationReason: "Pune toate uneltele importante într-un singur loc, ușor de folosit.",
     link: "https://mrdelivery.ro",
-    status: "live"
+    status: "live",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-screen-close-up-1728-large.mp4"
   },
   {
     id: "mrdelivery-shop",
@@ -22,7 +23,8 @@ export const projects: Project[] = [
     targetAudience: "Restaurante care au nevoie rapid de echipamente sau software.",
     innovationReason: "Scapi de hârțogărie și cumperi totul direct de pe net.",
     link: "https://mrdelivery.shop",
-    status: "live"
+    status: "live",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-shopping-cart-in-a-supermarket-1171-large.mp4"
   },
   {
     id: "mrdelivery-online",
@@ -33,7 +35,8 @@ export const projects: Project[] = [
     targetAudience: "Parteneri strategici și clienți corporate care necesită acces rapid la resursele MrDelivery.",
     innovationReason: "Oferă o infrastructură cloud robustă pentru gestionarea interacțiunilor digitale la scară largă.",
     link: "https://mrdelivery.online",
-    status: "live"
+    status: "live",
+    videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-world-map-with-lines-of-connection-23344-large.mp4"
   },
   {
     id: "instant-menu-pics",

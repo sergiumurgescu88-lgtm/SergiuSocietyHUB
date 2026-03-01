@@ -10,6 +10,7 @@ export interface Project {
   innovationReason: string;
   link: string;
   status: "live" | "demo" | "under-construction";
+  videoUrl?: string;
 }
 
 export interface CategoryInfo {

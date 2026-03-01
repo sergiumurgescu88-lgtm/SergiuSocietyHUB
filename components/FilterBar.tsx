@@ -1,6 +1,6 @@
 'use client';
 
-import { Category, CategoryInfo } from '@/types/project';
+import { Category } from '@/types/project';
 import { categories } from '@/data/categories';
 import { projects } from '@/data/projects';
 import { cn } from '@/lib/utils';

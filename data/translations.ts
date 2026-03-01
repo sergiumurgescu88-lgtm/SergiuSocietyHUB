@@ -1,5 +1,58 @@
 export type Language = 'en' | 'es' | 'fr' | 'it' | 'de' | 'ar' | 'ro';
 
+export interface Translation {
+  heroTitle: string;
+  heroSubtitle: string;
+  heroDescription: string;
+  freeAccessTitle: string;
+  freeAccessSubtitle: string;
+  subscribePlaceholder: string;
+  subscribeButton: string;
+  projects: string;
+  domains: string;
+  live: string;
+  statsTotal: string;
+  statsActive: string;
+  statsWork: string;
+  statsCategories: string;
+  statsTotalDesc: string;
+  statsActiveDesc: string;
+  statsWorkDesc: string;
+  statsCategoriesDesc: string;
+  filterAll: string;
+  filterActive: string;
+  filterWork: string;
+  viewProject: string;
+  openSite: string;
+  underConstruction: string;
+  whatIsThis: string;
+  whoIsItFor: string;
+  whyInnovative: string;
+  downloadPdf: string;
+  pdfResources: string;
+  pdfDescription: string;
+  footerText: string;
+  footerClick: string;
+  footerPassion: string;
+  successSubscribe: string;
+  whatsappHeadline: string;
+  whatsappBody: string;
+  whatsappTagline: string;
+  whatsappButton: string;
+  wildBotBadge: string;
+  wildBotTitle1: string;
+  wildBotTitle2: string;
+  wildBotSubtitle: string;
+  wildBotButton: string;
+  wildBotHowItWorks: string;
+  wildBotStatMessages: string;
+  wildBotStatDetection: string;
+  wildBotStatDelivery: string;
+  wildBotStatSubscription: string;
+  wildBotBehaviorBadge: string;
+  wildBotBehaviorDesc: string;
+}
+
 export const languages: { code: Language; label: string; flag: string; dir: 'ltr' | 'rtl' }[] = [
   { code: 'en', label: 'English', flag: '🇺🇸', dir: 'ltr' },
   { code: 'es', label: 'Español', flag: '🇪🇸', dir: 'ltr' },
@@ -10,7 +63,7 @@ export const languages: { code: Language; label: string; flag: string; dir: 'ltr
   { code: 'ro', label: 'Română', flag: '🇷🇴', dir: 'ltr' },
 ];
 
-export const translations = {
+export const translations: Record<Language, Translation> = {
   en: {
     heroTitle: "Welcome to SSociety HUB!",
     heroSubtitle: "I'm Sergiu, and I invite you to discover all our amazing projects!",
@@ -26,6 +79,10 @@ export const translations = {
     statsActive: "Active Projects",
     statsWork: "In Progress",
     statsCategories: "Categories",
+    statsTotalDesc: "I've gathered everything I've built here: from smart robots that help restaurants run better, to solar energy systems and tools that help you be more creative. Everything is designed to be simple, useful, and bring a touch of magic to everyday life.",
+    statsActiveDesc: "These projects are currently live and fully functional. They represent the core of our digital ecosystem, serving users and businesses in real-time.",
+    statsWorkDesc: "Innovation never stops. These projects are currently in the laboratory, being refined and tested before their official launch.",
+    statsCategoriesDesc: "Our work spans across multiple domains, from AI and automation to energy and lifestyle, ensuring a holistic approach to digital solutions.",
     filterAll: "All",
     filterActive: "Active",
     filterWork: "In Progress",
@@ -46,6 +103,18 @@ export const translations = {
     whatsappBody: "If you have a project in mind, write to me on WhatsApp and dreams become reality — tell me what you're thinking, what idea you want to develop. You write to me, and I build strategies around that idea. If you've found a problem in the world, we will create solutions around that problem and, together, we build a business.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Message me on WhatsApp",
+    wildBotBadge: "Invisible Automation Technology",
+    wildBotTitle1: "It's not a bot.",
+    wildBotTitle2: "It's a digital human.",
+    wildBotSubtitle: "The first WhatsApp outreach system that cannot be detected — because it behaves exactly like a real human. Unique messages, human timing, zero bans.",
+    wildBotButton: "📱 I want the system",
+    wildBotHowItWorks: "How it works ↓",
+    wildBotStatMessages: "Messages per campaign",
+    wildBotStatDetection: "Detection chance",
+    wildBotStatDelivery: "Delivery rate",
+    wildBotStatSubscription: "Monthly subscription",
+    wildBotBehaviorBadge: "Human Behavior Engine",
+    wildBotBehaviorDesc: "Algorithm simulating human typing and pauses.",
   },
   ro: {
     heroTitle: "Bun venit în SSociety HUB!",
@@ -62,6 +131,10 @@ export const translations = {
     statsActive: "Proiecte Active",
     statsWork: "În Lucru",
     statsCategories: "Categorii",
+    statsTotalDesc: "Am adunat aici tot ce am construit: de la roboți deștepți care ajută restaurantele să meargă mai bine, până la sisteme de energie solară și unelte care te ajută să fii mai creativ. Totul este făcut să fie simplu, util și să aducă un strop de magie în viața de zi cu zi.",
+    statsActiveDesc: "Aceste proiecte sunt în prezent live și complet funcționale. Ele reprezintă nucleul ecosistemului nostru digital, servind utilizatorii și afacerile în timp real.",
+    statsWorkDesc: "Inovația nu se oprește niciodată. Aceste proiecte sunt în prezent în laborator, fiind rafinate și testate înainte de lansarea lor oficială.",
+    statsCategoriesDesc: "Munca noastră se întinde pe mai multe domenii, de la AI și automatizare la energie și stil de viață, asigurând o abordare holistică a soluțiilor digitale.",
     filterAll: "Toate",
     filterActive: "Active",
     filterWork: "În Lucru",
@@ -82,6 +155,18 @@ export const translations = {
     whatsappBody: "Dacă ai un proiect în minte, scrie-mi pe WhatsApp și visele devin realitate — spune-mi ce gândești, ce idee vrei să dezvolți. Tu îmi scrii, iar eu construiesc strategii în jurul acelei idei. Dacă ai găsit o problemă în lume, vom crea soluții în jurul acelei probleme și, împreună, construim un business.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Scrie-mi pe WhatsApp",
+    wildBotBadge: "Tehnologie de automatizare invizibilă",
+    wildBotTitle1: "Nu e un bot.",
+    wildBotTitle2: "E un om digital.",
+    wildBotSubtitle: "Primul sistem de outreach WhatsApp care nu poate fi detectat — pentru că se comportă exact ca un om real. Mesaje unice, timpi umani, zero ban.",
+    wildBotButton: "📱 Vreau sistemul",
+    wildBotHowItWorks: "Cum funcționează ↓",
+    wildBotStatMessages: "Mesaje per campanie",
+    wildBotStatDetection: "Șansă de detecție",
+    wildBotStatDelivery: "Rată de livrare",
+    wildBotStatSubscription: "Abonament lunar",
+    wildBotBehaviorBadge: "Human Behavior Engine",
+    wildBotBehaviorDesc: "Algoritm de simulare a dactilografierii și pauzelor umane.",
   },
   es: {
     heroTitle: "¡Bienvenido a SSociety HUB!",
@@ -98,6 +183,10 @@ export const translations = {
     statsActive: "Proyectos Activos",
     statsWork: "En Progreso",
     statsCategories: "Categorías",
+    statsTotalDesc: "He reunido aquí todo lo que he construido: desde robots inteligentes que ayudan a los restaurantes a funcionar mejor, hasta sistemas de energía solar y herramientas que te ayudan a ser más creativo. Todo está diseñado para ser simple, útil y aportar un toque de magia a la vida cotidiana.",
+    statsActiveDesc: "Estos proyectos están actualmente en vivo y son plenamente funcionales. Representan el núcleo de nuestro ecosistema digital, sirviendo a usuarios y empresas en tiempo real.",
+    statsWorkDesc: "La innovación nunca se detiene. Estos proyectos están actualmente en el laboratorio, siendo refinados y probados antes de su lanzamiento oficial.",
+    statsCategoriesDesc: "Nuestro trabajo abarca múltiples dominios, desde la IA y la automatización hasta la energía y el estilo de vida, asegurando un enfoque holístico de las soluciones digitales.",
     filterAll: "Todos",
     filterActive: "Activos",
     filterWork: "En Progreso",
@@ -118,6 +207,18 @@ export const translations = {
     whatsappBody: "Si tienes un proyecto en mente, escríbeme por WhatsApp y los sueños se hacen realidad: dime qué estás pensando, qué idea quieres desarrollar. Tú me escribes y yo construyo estrategias en torno a esa idea. Si has encontrado un problema en el mundo, crearemos soluciones en torno a ese problema y, juntos, construiremos un negocio.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Escríbeme por WhatsApp",
+    wildBotBadge: "INNOVADOR",
+    wildBotTitle1: "No es un bot.",
+    wildBotTitle2: "Es un humano digital.",
+    wildBotSubtitle: "El primer sistema de alcance de WhatsApp que no puede ser detectado, porque se comporta exactamente como un humano real. Mensajes únicos, tiempos humanos, cero bloqueos.",
+    wildBotButton: "📱 Quiero el sistema",
+    wildBotHowItWorks: "Cómo funciona",
+    wildBotStatMessages: "Mensajes por campaña",
+    wildBotStatDetection: "Probabilidad de detección",
+    wildBotStatDelivery: "Tasa de entrega",
+    wildBotStatSubscription: "Suscripción mensual",
+    wildBotBehaviorBadge: "Motor de Comportamiento Humano",
+    wildBotBehaviorDesc: "Algoritmo que simula la escritura y las pausas humanas.",
   },
   fr: {
     heroTitle: "Bienvenue sur SSociety HUB !",
@@ -134,6 +235,10 @@ export const translations = {
     statsActive: "Projets Actifs",
     statsWork: "En Cours",
     statsCategories: "Catégories",
+    statsTotalDesc: "J'ai rassemblé ici tout ce que j'ai construit : des robots intelligents qui aident les restaurants à mieux fonctionner, aux systèmes d'énergie solaire et aux outils qui vous aident à être plus créatif. Tout est conçu pour être simple, utile et apporter une touche de magie au quotidien.",
+    statsActiveDesc: "Ces projets sont actuellement en ligne et pleinement fonctionnels. Ils représentent le cœur de notre écosystème numérique, au service des utilisateurs et des entreprises en temps réel.",
+    statsWorkDesc: "L'innovation ne s'arrête jamais. Ces projets sont actuellement en laboratoire, en cours de peaufinage et de test avant leur lancement officiel.",
+    statsCategoriesDesc: "Notre travail s'étend sur plusieurs domaines, de l'IA et de l'automatisation à l'énergie et au mode de vie, garantissant une approche holistique des solutions numériques.",
     filterAll: "Tous",
     filterActive: "Actifs",
     filterWork: "En Cours",
@@ -154,6 +259,18 @@ export const translations = {
     whatsappBody: "Si vous avez un projet en tête, écrivez-moi sur WhatsApp et les rêves deviennent réalité — dites-moi ce que vous pensez, quelle idée vous souhaitez développer. Vous m'écrivez, et je construis des stratégies autour de cette idée. Si vous avez trouvé un problème dans le monde, nous créerons des solutions autour de ce problème et, ensemble, nous construirons une entreprise.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Écrivez-moi sur WhatsApp",
+    wildBotBadge: "INNOVANT",
+    wildBotTitle1: "Ce n'est pas un bot.",
+    wildBotTitle2: "C'est un humain numérique.",
+    wildBotSubtitle: "Le premier système de prospection WhatsApp indétectable — car il se comporte exactement comme un véritable humain. Messages uniques, timing humain, zéro bannissement.",
+    wildBotButton: "📱 Je veux le système",
+    wildBotHowItWorks: "Comment ça marche",
+    wildBotStatMessages: "Messages par campagne",
+    wildBotStatDetection: "Chance de détection",
+    wildBotStatDelivery: "Taux de livraison",
+    wildBotStatSubscription: "Abonnement mensuel",
+    wildBotBehaviorBadge: "Moteur de Comportement Humain",
+    wildBotBehaviorDesc: "Algorithme simulant la dactylographie et les pauses humaines.",
   },
   it: {
     heroTitle: "Benvenuti in SSociety HUB!",
@@ -170,6 +287,10 @@ export const translations = {
     statsActive: "Progetti Attivi",
     statsWork: "In Corso",
     statsCategories: "Categorie",
+    statsTotalDesc: "Ho raccolto qui tutto ciò che ho costruito: dai robot intelligenti che aiutano i ristoranti a funzionare meglio, ai sistemi di energia solare e agli strumenti che ti aiutano a essere più creativo. Tutto è progettato per essere semplice, utile e portare un tocco di magia nella vita di tutti i giorni.",
+    statsActiveDesc: "Questi progetti sono attualmente attivi e pienamente funzionali. Rappresentano il cuore del nostro ecosistema digitale, servendo utenti e aziende in tempo reale.",
+    statsWorkDesc: "L'innovazione non si ferma mai. Questi progetti sono attualmente in laboratorio, in fase di perfezionamento e test prima del loro lancio ufficiale.",
+    statsCategoriesDesc: "Il nostro lavoro spazia in più domini, dall'IA e l'automazione all'energia e allo stile di vita, garantendo un approccio olistico alle soluzioni digitali.",
     filterAll: "Tutti",
     filterActive: "Attivi",
     filterWork: "In Corso",
@@ -190,6 +311,18 @@ export const translations = {
     whatsappBody: "Se hai un progetto in mente, scrivimi su WhatsApp e i sogni diventano realtà: dimmi cosa stai pensando, quale idea vuoi sviluppare. Tu mi scrivi e io costruisco strategie attorno a quell'idea. Se hai trovato un problema nel mondo, creeremo soluzioni attorno a quel problema e, insieme, costruiremo un business.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Scrivimi su WhatsApp",
+    wildBotBadge: "INNOVATIVO",
+    wildBotTitle1: "Non è un bot.",
+    wildBotTitle2: "È un umano digitale.",
+    wildBotSubtitle: "Il primo sistema di outreach WhatsApp che non può essere rilevato, perché si comporta esattamente come un vero umano. Messaggi unici, tempi umani, zero ban.",
+    wildBotButton: "📱 Voglio il sistema",
+    wildBotHowItWorks: "Come funziona",
+    wildBotStatMessages: "Messaggi per campagna",
+    wildBotStatDetection: "Possibilità di rilevamento",
+    wildBotStatDelivery: "Tasso di consegna",
+    wildBotStatSubscription: "Abbonamento mensile",
+    wildBotBehaviorBadge: "Motore di Comportamento Umano",
+    wildBotBehaviorDesc: "Algoritmo che simula la digitazione e le pause umane.",
   },
   de: {
     heroTitle: "Willkommen im SSociety HUB!",
@@ -206,6 +339,10 @@ export const translations = {
     statsActive: "Aktive Projekte",
     statsWork: "In Arbeit",
     statsCategories: "Kategorien",
+    statsTotalDesc: "Ich habe hier alles gesammelt, was ich gebaut habe: von intelligenten Robotern, die Restaurants helfen, besser zu laufen, bis hin zu Solarenergiesystemen und Werkzeugen, die Ihnen helfen, kreativer zu sein. Alles ist darauf ausgelegt, einfach und nützlich zu sein und einen Hauch von Magie in den Alltag zu bringen.",
+    statsActiveDesc: "Diese Projekte sind derzeit live und voll funktionsfähig. Sie stellen den Kern unseres digitalen Ökosystems dar und dienen Nutzern und Unternehmen in Echtzeit.",
+    statsWorkDesc: "Innovation hört nie auf. Diese Projekte befinden sich derzeit im Labor und werden vor ihrer offiziellen Einführung verfeinert und getestet.",
+    statsCategoriesDesc: "Unsere Arbeit erstreckt sich über mehrere Bereiche, von KI und Automatisierung bis hin zu Energie und Lifestyle, und gewährleistet einen ganzheitlichen Ansatz für digitale Lösungen.",
     filterAll: "Alle",
     filterActive: "Aktiv",
     filterWork: "In Arbeit",
@@ -226,6 +363,18 @@ export const translations = {
     whatsappBody: "Wenn Sie ein Projekt im Sinn haben, schreiben Sie mir auf WhatsApp und Träume werden wahr – sagen Sie mir, was Sie denken, welche Idee Sie entwickeln möchten. Sie schreiben mir, und ich entwickle Strategien rund um diese Idee. Wenn Sie ein Problem in der Welt gefunden haben, werden wir Lösungen für dieses Problem entwickeln und gemeinsam ein Unternehmen aufbauen.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "Schreib mir auf WhatsApp",
+    wildBotBadge: "INNOVATIV",
+    wildBotTitle1: "Es ist kein Bot.",
+    wildBotTitle2: "Es ist ein digitaler Mensch.",
+    wildBotSubtitle: "Das erste WhatsApp-Outreach-System, das nicht erkannt werden kann – weil es sich genau wie ein echter Mensch verhält. Einzigartige Nachrichten, menschliches Timing, null Sperren.",
+    wildBotButton: "📱 Ich will das System",
+    wildBotHowItWorks: "Wie es funktioniert",
+    wildBotStatMessages: "Nachrichten pro Kampagne",
+    wildBotStatDetection: "Erkennungschance",
+    wildBotStatDelivery: "Zustellrate",
+    wildBotStatSubscription: "Monatliches Abonnement",
+    wildBotBehaviorBadge: "Human Behavior Engine",
+    wildBotBehaviorDesc: "Algorithmus zur Simulation menschlichen Tippens und Pausen.",
   },
   ar: {
     heroTitle: "مرحباً بكم في SSociety HUB!",
@@ -242,6 +391,10 @@ export const translations = {
     statsActive: "المشاريع النشطة",
     statsWork: "قيد التنفيذ",
     statsCategories: "الفئات",
+    statsTotalDesc: "لقد جمعت هنا كل ما بنيته: من الروبوتات الذكية التي تساعد المطاعم على العمل بشكل أفضل، إلى أنظمة الطاقة الشمسية والأدوات التي تساعدك على أن تكون أكثر إبداعاً. كل شيء مصمم ليكون بسيطاً ومفيداً ويضفي لمسة من السحر على الحياة اليومية.",
+    statsActiveDesc: "هذه المشاريع مباشرة حالياً وتعمل بكامل طاقتها. إنها تمثل جوهر نظامنا البيئي الرقمي، وتخدم المستخدمين والشركات في الوقت الفعلي.",
+    statsWorkDesc: "الابتكار لا يتوقف أبداً. هذه المشاريع موجودة حالياً في المختبر، حيث يتم صقلها واختبارها قبل إطلاقها الرسمي.",
+    statsCategoriesDesc: "يمتد عملنا عبر مجالات متعددة، من الذكاء الاصطناعي والأتمتة إلى الطاقة وأسلوب الحياة، مما يضمن اتباع نهج شامل للحلول الرقمية.",
     filterAll: "الكل",
     filterActive: "نشط",
     filterWork: "قيد التنفيذ",
@@ -262,5 +415,17 @@ export const translations = {
     whatsappBody: "إذا كان لديك مشروع في ذهنك، فاكتب لي على واتساب وستصبح الأحلام حقيقة - أخبرني بما تفكر فيه، وما هي الفكرة التي تريد تطويرها. أنت تكتب لي، وأنا أبني استراتيجيات حول تلك الفكرة. إذا وجدت مشكلة في العالم، فسنقوم بإنشاء حلول حول تلك المشكلة، ومعاً، نبني عملاً تجارياً.",
     whatsappTagline: "Welcome to SSociety HUB - powered by love",
     whatsappButton: "راسلني على واتساب",
+    wildBotBadge: "مبتكر",
+    wildBotTitle1: "ليس روبوتاً.",
+    wildBotTitle2: "إنه إنسان رقمي.",
+    wildBotSubtitle: "أول نظام تواصل عبر واتساب لا يمكن اكتشافه - لأنه يتصرف تماماً مثل إنسان حقيقي. رسائل فريدة، توقيت بشري، صفر حظر.",
+    wildBotButton: "📱 أريد النظام",
+    wildBotHowItWorks: "كيف يعمل",
+    wildBotStatMessages: "رسائل لكل حملة",
+    wildBotStatDetection: "فرصة الكشف",
+    wildBotStatDelivery: "معدل التسليم",
+    wildBotStatSubscription: "اشتراك شهري",
+    wildBotBehaviorBadge: "محرك السلوك البشري",
+    wildBotBehaviorDesc: "خوارزمية تحاكي الكتابة البشرية والتوقفات.",
   }
 };
