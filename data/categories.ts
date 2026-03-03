@@ -8,5 +8,6 @@ export const categories: CategoryInfo[] = [
   { id: "energy", label: "Energie", emoji: "☀️", color: "bg-emerald-500", description: "Soluții verzi pentru viitor: cum să folosești soarele ca să ai curent electric ieftin și curat." },
   { id: "ops", label: "Operațiuni", emoji: "📊", color: "bg-violet-500", description: "Sisteme care organizează treaba într-o firmă și fac lucrurile plictisitoare să meargă singure." },
   { id: "biz", label: "Afaceri", emoji: "💼", color: "bg-orange-500", description: "Tot ce îți trebuie ca să crești o afacere, să deschizi o franciză sau să ai grijă de mașina ta." },
+  { id: "security", label: "Securitate", emoji: "🛡️", color: "bg-red-500", description: "Soluții avansate pentru protecția datelor și siguranța personală în era digitală." },
   { id: "life", label: "Lifestyle", emoji: "✨", color: "bg-pink-500", description: "Proiecte pentru o viață mai frumoasă: sănătate, relații bune cu cei dragi și experiențe de neuitat." },
 ];

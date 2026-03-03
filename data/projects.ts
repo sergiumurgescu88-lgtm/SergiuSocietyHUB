@@ -589,7 +589,7 @@ export const projects: Project[] = [
   },
   {
     id: "cyberintel",
-    category: "biz",
+    category: "security",
     emoji: "🛡️",
     name: "CyberIntel Hub",
     description: "Centru de informații despre securitate online — știi mereu ce amenințări există, cum te protejezi și cum îți ții afacerea în siguranță pe internet.",
@@ -668,7 +668,7 @@ export const projects: Project[] = [
   },
   {
     id: "truthsignal",
-    category: "energy",
+    category: "security",
     emoji: "📡",
     name: "TruthSignal",
     description: "Verifică dacă ce citești online este adevărat sau fals. Un detector AI de fake news — super util într-o lume plină de informații false.",
@@ -679,7 +679,7 @@ export const projects: Project[] = [
   },
   {
     id: "guardian-ai",
-    category: "energy",
+    category: "security",
     emoji: "🔒",
     name: "Guardian AI",
     description: "Un sistem de monitorizare și protecție inteligent — alertează când ceva nu e în regulă și te ajută să îți protezezi ce contează mai mult.",
@@ -690,7 +690,7 @@ export const projects: Project[] = [
   },
   {
     id: "mobile-first-guardian",
-    category: "life",
+    category: "security",
     emoji: "🛡️",
     name: "Mobile First Guardian",
     description: "Un sistem de securitate și protecție optimizat pentru mobil. În curs de dezvoltare pentru a oferi cea mai bună experiență de siguranță portabilă.",

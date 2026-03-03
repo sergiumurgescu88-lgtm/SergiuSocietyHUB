@@ -154,7 +154,7 @@ export default function PortfolioPage() {
             <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.projects}</div>
           </div>
           <div className="px-3 py-4 md:px-8 md:py-5 text-center border-r border-white/10">
-            <div className="font-display font-extrabold text-xl md:text-3xl text-white">7</div>
+            <div className="font-display font-extrabold text-xl md:text-3xl text-white">{categories.length - 1}</div>
             <div className="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-[#6b7299] mt-1">{t.domains}</div>
           </div>
           <div className="px-3 py-4 md:px-8 md:py-5 text-center">

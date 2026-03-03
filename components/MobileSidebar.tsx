@@ -35,6 +35,7 @@ export default function MobileSidebar({ onProjectClick }: MobileSidebarProps) {
     ops: { text: 'text-violet-400', bg: 'bg-violet-500/10', border: 'border-violet-500/20' },
     biz: { text: 'text-orange-400', bg: 'bg-orange-500/10', border: 'border-orange-500/20' },
     life: { text: 'text-pink-400', bg: 'bg-pink-500/10', border: 'border-pink-500/20' },
+    security: { text: 'text-red-400', bg: 'bg-red-500/10', border: 'border-red-500/20' },
   };
 
   return (
@@ -101,7 +102,15 @@ export default function MobileSidebar({ onProjectClick }: MobileSidebarProps) {
                         <div className="flex items-center gap-2">
                           <span className="text-lg">{cat.emoji}</span>
                           <h3 className={cn("text-[11px] font-black uppercase tracking-widest", style.text)}>
-                            {cat.label}
+                            {cat.id === 'resto' ? t.catResto :
+                             cat.id === 'ai' ? t.catAI :
+                             cat.id === 'mkt' ? t.catMkt :
+                             cat.id === 'energy' ? t.catEnergy :
+                             cat.id === 'ops' ? t.catOps :
+                             cat.id === 'biz' ? t.catBiz :
+                             cat.id === 'life' ? t.catLife :
+                             cat.id === 'security' ? t.catSecurity :
+                             cat.label}
                           </h3>
                         </div>
                         <span className={cn("text-[10px] font-bold px-1.5 py-0.5 rounded-md bg-white/10", style.text)}>

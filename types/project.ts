@@ -1,4 +1,4 @@
-export type Category = "all" | "resto" | "ai" | "mkt" | "energy" | "ops" | "biz" | "life";
+export type Category = "all" | "resto" | "ai" | "mkt" | "energy" | "ops" | "biz" | "life" | "security";
 
 export interface Project {
   id: string;

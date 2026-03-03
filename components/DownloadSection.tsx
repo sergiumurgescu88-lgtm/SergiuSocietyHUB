@@ -81,7 +81,7 @@ export default function DownloadSection() {
                 </p>
                 <div className="mt-auto flex items-center justify-between">
                   <span className="text-[10px] font-black text-indigo-400 uppercase tracking-widest flex items-center gap-2">
-                    Descarcă acum
+                    {t.downloadNow}
                     <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                   <span className="text-[9px] text-[#4a4e69] font-mono font-bold">PDF · 2.4 MB</span>

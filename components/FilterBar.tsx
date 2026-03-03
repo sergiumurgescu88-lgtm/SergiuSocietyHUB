@@ -37,7 +37,18 @@ export default function FilterBar({ activeCategory, onCategoryChange }: FilterBa
             )}
           >
             <span className="text-lg">{cat.emoji}</span>
-            <span>{cat.id === 'all' ? t.filterAll : cat.label}</span>
+            <span>
+              {cat.id === 'all' ? t.filterAll : 
+               cat.id === 'resto' ? t.catResto :
+               cat.id === 'ai' ? t.catAI :
+               cat.id === 'mkt' ? t.catMkt :
+               cat.id === 'energy' ? t.catEnergy :
+               cat.id === 'ops' ? t.catOps :
+               cat.id === 'biz' ? t.catBiz :
+               cat.id === 'security' ? t.catSecurity :
+               cat.id === 'life' ? t.catLife :
+               cat.label}
+            </span>
             <span className="text-[10px] font-black bg-black/20 px-2 py-0.5 rounded-full min-w-[20px] text-center">
               {getCount(cat.id)}
             </span>

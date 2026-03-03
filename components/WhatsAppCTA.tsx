@@ -47,7 +47,7 @@ export default function WhatsAppCTA() {
             <div className="flex items-center gap-2 self-start md:self-center bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">
               <User size={12} className="text-emerald-400" />
               <span className="text-[10px] font-black uppercase tracking-wider text-emerald-400">
-                Human Bot
+                {t.humanBot}
               </span>
               <ShieldCheck size={12} className="text-emerald-400" />
             </div>
